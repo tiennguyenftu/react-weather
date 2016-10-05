@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.use(function (req, res, next) {
-    if (req.header['x-forwarded-proto']) return next();
+    if (req.headers['x-forwarded-proto']) return next();
     res.redirect('http://' + req.hostname + req.url);
 });
 
