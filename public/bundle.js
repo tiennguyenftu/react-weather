@@ -27315,8 +27315,8 @@
 	        function renderMessage() {
 	            if (isLoading) {
 	                return React.createElement(
-	                    'h3',
-	                    null,
+	                    'p',
+	                    { className: 'text-center' },
 	                    'Fetching weather...'
 	                );
 	            } else if (temp && location) {
@@ -27327,8 +27327,8 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h3',
-	                null,
+	                'h1',
+	                { className: 'text-center' },
 	                'Get Weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -27368,7 +27368,7 @@
 	                'form',
 	                { onSubmit: this.onFormSubmit },
 	                React.createElement('input', { type: 'text', placeholder: 'Enter city name', ref: 'location' }),
-	                React.createElement('input', { type: 'submit', value: 'Get Weather' })
+	                React.createElement('input', { type: 'submit', value: 'Get Weather', className: 'expanded hollow button' })
 	            )
 	        );
 	    }
@@ -27380,7 +27380,7 @@
 /* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -27389,13 +27389,13 @@
 	    var location = _ref.location;
 
 	    return React.createElement(
-	        'p',
-	        null,
-	        'It\'s ',
+	        "h3",
+	        { className: "text-center" },
+	        "It's ",
 	        temp,
-	        ' in ',
+	        " in ",
 	        location,
-	        '.'
+	        "."
 	    );
 	};
 
@@ -28792,7 +28792,7 @@
 	        React.createElement(
 	            "p",
 	            null,
-	            "This is a weather application build on React. I build this for complete React Developer Course."
+	            "This is a weather application build on React. I build this for The Complete React Developer Course."
 	        ),
 	        React.createElement(
 	            "p",
